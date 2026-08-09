@@ -1,21 +1,11 @@
-// import Counter from "./components/Counter"
-
-import Todo from "./components/Reducer/Todo"
-
-// import Counter from "./components/Reducer/Counter"
-// import Todo from "./components/Todo"
-
+import MiniShoppingCart from "./components/Reducer/MiniShoppingCart";
 
 function App() {
   return (
-    <div className="bg-black/90 h-screen text-white p-5">
-      {/* <Counter></Counter> */}
-      {/* <Todo></Todo> */}
-      {/* <Counter/> */}
-      <Todo></Todo>
-
+    <div className="bg-black/90 h-screen text-white px-5 ">
+      <MiniShoppingCart></MiniShoppingCart>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
