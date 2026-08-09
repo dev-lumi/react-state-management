@@ -48,8 +48,8 @@ function Todo() {
         {todos.map((todo)=>(<li key={todo.id}>
             <span onClick={()=>dispatch({type: "TOGGLE_TODO",payload: todo.id})} style={{textDecoration: todo.completed? "line-through": "none", cursor: "pointer"}}>
                 {todo.text}
-                <button onClick={()=>dispatch({type: "DELETE_TODO", payload: todo.id})}>Delete</button>
             </span>
+                <button onClick={()=>dispatch({type: "DELETE_TODO", payload: todo.id})}>Delete</button>
         </li>))}
       </ul>
     </div>
