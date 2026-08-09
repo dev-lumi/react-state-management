@@ -2,8 +2,18 @@
 
  @layer base {
     button{
-        @apply ring  rounded px-4 py-1 mr-5 mt-5;
+        @apply ring  rounded px-4 py-1 mx-5 mt-5;
     }
+    input{
+        @apply ring px-4 py-1 rounded 
+    }
+    ul{
+        @apply border-t mt-5
+    }
+    span{
+        @apply italic mr-5
+    }
+
 }
 
 

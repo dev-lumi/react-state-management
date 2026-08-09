@@ -1,6 +1,8 @@
 // import Counter from "./components/Counter"
 
-import Counter from "./components/Reducer/Counter"
+import Todo from "./components/Reducer/Todo"
+
+// import Counter from "./components/Reducer/Counter"
 // import Todo from "./components/Todo"
 
 
@@ -9,7 +11,8 @@ function App() {
     <div className="bg-black/90 h-screen text-white p-5">
       {/* <Counter></Counter> */}
       {/* <Todo></Todo> */}
-      <Counter/>
+      {/* <Counter/> */}
+      <Todo></Todo>
 
     </div>
   )
