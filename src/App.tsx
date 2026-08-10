@@ -1,9 +1,14 @@
-import MiniShoppingCart from "./components/Reducer/MiniShoppingCart";
+import { createContext } from "react";
+import Example from "./components/Context/Example";
 
+export const ExampleContext = createContext<string|null>(null);
 function App() {
+  let text : string = "It is working."
   return (
     <div className="bg-black/90 h-screen text-white px-5 ">
-      <MiniShoppingCart></MiniShoppingCart>
+      <ExampleContext.Provider value={text}>
+        <Example></Example>
+      </ExampleContext.Provider>
     </div>
   );
 }
