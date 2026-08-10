@@ -1,16 +1,28 @@
-import { createContext } from "react";
-import Example from "./components/Context/Example";
+import { useState } from "react";
+import { CartProvider } from "./components/Context/CartContext";
+import Navbar from "./components/Context/Navbar";
+import Products from "./components/Context/Products";
+import Cart from "./components/Context/Cart";
 
-export const ExampleContext = createContext<string|null>(null);
-function App() {
-  let text : string = "It is working."
+
+
+type Page = "products" | "cart";
+
+export default function App() {
+  const [page, setPage] = useState<Page>("products");
+
   return (
-    <div className="bg-black/90 h-screen text-white px-5 ">
-      <ExampleContext.Provider value={text}>
-        <Example></Example>
-      </ExampleContext.Provider>
-    </div>
+    <CartProvider>
+      <Navbar
+        page={page}
+        setPage={setPage}
+      />
+
+      {page === "products" ? (
+        <Products />
+      ) : (
+        <Cart />
+      )}
+    </CartProvider>
   );
 }
-
-export default App;
